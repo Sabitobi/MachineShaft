@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.machineshaft.controller.DataController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label text="Podaj dane geometryczne, obciążenia układu i wybierz materiał" />
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@main.JPG" />
+         </image>
+      </ImageView>
+      <Label fx:id="label1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="70.0" text="Wymiary układu i wartości sił podaj zgodnie z schematem." VBox.vgrow="ALWAYS" />
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="236.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="233.0" text="F1 - siła obwodowa (koło1.) [kN]" />
+            <Label maxWidth="1.7976931348623157E308" text="Fw1 - siła wzdłużna (koło 1.) [kN]" GridPane.rowIndex="1" />
+            <Label maxWidth="1.7976931348623157E308" text="Fp1 - siła poprzeczna (koło1) [kN]" GridPane.rowIndex="2" />
+            <Label maxWidth="1.7976931348623157E308" text="F2 - siła obwodowa (koło 2.) [kN]" GridPane.rowIndex="3" />
+            <Label maxWidth="1.7976931348623157E308" text="Fp2 - siła poprzeczna (koło 2.) [kN]" GridPane.rowIndex="4" />
+            <Label maxWidth="1.7976931348623157E308" text="l - odległość (łożysko 1 - koło 2.) [mm]" GridPane.rowIndex="5" />
+            <Label maxWidth="1.7976931348623157E308" text="l1 - odległość (łożysko 1 - łożysko 2.) [mm]" GridPane.rowIndex="6" />
+            <Label maxWidth="1.7976931348623157E308" text="l2 - odległość (łożysko 1 - koło 1.) [mm]" GridPane.rowIndex="7" />
+            <Label maxWidth="1.7976931348623157E308" text="d1 - średnica (koło 1.) [mm]" GridPane.rowIndex="8" />
+            <Label maxWidth="1.7976931348623157E308" text="d2 - średnica (koło 1.) [mm]" GridPane.rowIndex="9" />
+            <TextField GridPane.columnIndex="1" />
+            <TextField fx:id="textFieldF1" text="0" GridPane.columnIndex="1" />
+            <TextField fx:id="textFieldFw1" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="textFieldFp1" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="textFieldF2" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="textFieldFp2" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="textFieldL" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="textFieldL1" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="textFieldL2" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="textFieldD1" text="0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="textFieldD2" text="0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+         </children>
+      </GridPane>
+      <HBox />
+      <HBox />
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label maxWidth="1.7976931348623157E308" text="Materiał" />
+            <ChoiceBox fx:id="choiceBoxMaterial" maxWidth="1.7976931348623157E308" prefWidth="150.0" GridPane.columnIndex="1" />
+            <Button fx:id="buttonMenu" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Menu" GridPane.rowIndex="1" />
+            <Button fx:id="buttonCharts" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Wykresy" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>

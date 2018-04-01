@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.machineshaft.controller.ChartsController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane VBox.vgrow="ALWAYS">
+         <children>
+            <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+              
+                <Tab fx:id="tab1" text="Mg ZY">
+                  <content>
+                        <AreaChart fx:id="areaChart1">
+                          <xAxis>
+                            <NumberAxis label="[mm]" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="[N*m]" side="LEFT" />
+                          </yAxis>
+                        </AreaChart>
+                  </content>
+                </Tab>
+                
+                <Tab fx:id="tab2" text="Mg XY">
+                  <content>
+                        <AreaChart fx:id="areaChart2">
+                          <xAxis>
+                            <NumberAxis label="[mm]" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="[N*m]" side="LEFT" />
+                          </yAxis>
+                        </AreaChart>
+                  </content>
+                </Tab>
+                
+                <Tab fx:id="tab3" text="Mg">
+                  <content>
+                        <AreaChart fx:id="areaChart3">
+                          <xAxis>
+                            <NumberAxis label="[mm]" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="[N*m]" side="LEFT" />
+                          </yAxis>
+                        </AreaChart>
+                  </content>
+                </Tab>
+                
+                <Tab fx:id="tab4" text="Ms">
+                  <content>
+                        <AreaChart fx:id="areaChart4">
+                          <xAxis>
+                            <NumberAxis label="[mm]" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="[N*m]" side="LEFT" />
+                          </yAxis>
+                        </AreaChart>
+                  </content>
+                </Tab>
+                
+                <Tab fx:id="tab5" text="Ms red.">
+                  <content>
+                        <AreaChart fx:id="areaChart5">
+                          <xAxis>
+                            <NumberAxis label="[mm]" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="[N*m]" side="LEFT" />
+                          </yAxis>
+                        </AreaChart>
+                  </content>
+                </Tab>
+                
+                <Tab fx:id="tab6" text="Mz">
+                  <content>
+                        <AreaChart fx:id="areaChart6">
+                          <xAxis>
+                            <NumberAxis label="[mm]" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="[N*m]" side="LEFT" />
+                          </yAxis>
+                        </AreaChart>
+                  </content>
+                </Tab>
+                
+                  <Tab fx:id="tab7" text="Ogórek">
+                  <content>
+                        <AreaChart fx:id="areaChart7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                          <xAxis>
+                            <NumberAxis label="[mm]" side="BOTTOM" fx:id="xAxis7" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="yAxis7" label="mm" side="LEFT" />
+                          </yAxis>
+                        </AreaChart>
+                  </content>
+                </Tab>
+                
+              </tabs>
+            </TabPane>
+            <ImageView fx:id="imageArrowRight" fitHeight="25.0" fitWidth="43.0" layoutX="361.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="47.0" AnchorPane.rightAnchor="2.0">
+               <image>
+                  <Image url="@right.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageArrowTop" fitHeight="43.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="30.0">
+               <image>
+                  <Image url="@top.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="buttonMain" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Menu" />
+            <Button fx:id="buttonGradation" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Stopniowanie" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>
